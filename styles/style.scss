@@ -1,0 +1,43 @@
+$primaryColor: #205896;
+$textColor: #fff;
+
+@mixin textStyle($color, $size) {
+  color: $color;
+  font-size: $size;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #778899;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.cv-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background: #fff;
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.3);
+  margin: 60px;
+}
+
+@import './leftSide';
+@import './rightSide';
+@import './responsive';

@@ -1,0 +1,109 @@
+.cv-right-side {
+  position: relative;
+  background: #fff;
+  padding: 50px;
+
+  .cv-about {
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-about-title {
+      color: #205896;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .cv-about-box {
+      display: flex;
+      flex-direction: row;
+      margin: 30px 0;
+
+      .cv-company {
+        min-width: 160px;
+
+        h5 {
+          @include textStyle($primaryColor, 0.8em);
+
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .cv-skills {
+    .cv-about-box {
+      position: relative;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      justify-content: center;
+      align-items: center;
+      // padding: 10px 0;
+
+      h4 {
+        @include textStyle($primaryColor, 0.9em);
+
+        text-transform: uppercase;
+      }
+
+      .ratio {
+        position: relative;
+        width: 100%;
+        height: 6px;
+        background-color: #c0c0c0;;
+        border-radius: 5px;
+
+        div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background: #205896;
+          border-radius: 5px;
+        }
+
+        .cv-skills__html {
+          width: 90%;
+        }
+        
+        .cv-skills__css {
+          width: 70%;
+        }
+        
+        .cv-skills__js {
+          width: 85%;
+        }
+        
+        .cv-skills__react {
+          width: 70%;
+        }
+        
+        .cv-skills__ts {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .cv-hobby {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        font-weight: 300;
+        margin: 10px 0;
+
+        .fas {
+          @include textStyle($primaryColor, 1.4em);
+
+          width: 30px;
+        }
+      }
+    }
+  }
+
+}

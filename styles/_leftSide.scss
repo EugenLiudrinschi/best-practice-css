@@ -1,0 +1,127 @@
+
+
+.cv-left-side {
+  position: relative;
+  background: #205896;
+  padding: 30px;
+  margin-left: 40px;
+  
+  .cv-profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid $textColor;
+    padding-bottom: 30px;
+
+    .cv-image {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+
+      img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    h2 {
+      @include textStyle($textColor, 1.8em);
+
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.8em;
+      margin-top: 10px;
+    }
+
+    p {
+      @include textStyle($textColor, 1em);
+
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.5em;
+    }
+  }
+
+  .cv-contact {
+    border-bottom: 1px solid $textColor;
+    padding: 20px 0 20px 10px;
+    &:last-of-type{
+      border-bottom: none;
+    }
+
+    .cv-contact-title {
+      @include textStyle($textColor, 1.5em);
+      
+      margin-bottom: 10px;
+    }
+
+    ul {
+      li {
+        margin-top: 20px;
+
+        .cv-contact-text {
+          @include textStyle($textColor, 0.9em);
+        }
+      }
+    }
+
+    h3 {
+      color: $textColor;
+    }
+  }
+
+  .cv-education {
+    h4 {
+      color: $textColor;
+      font-weight: 200;
+      &::nth-child(2) {
+        color: $textColor;
+        font-weight: 600;
+      }
+    }
+
+    h5 {
+      color: #c0c0c0;
+      font-weight: 500;
+    }
+  }
+
+  .cv-language {
+    .ratio {
+        position: relative;
+        width: 100%;
+        height: 4px;
+        background-color: #101e24;
+        display: block;
+        margin-top: 5px;
+        border-radius: 5px;
+
+        div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background: $textColor;
+          border-radius: 5px;
+        }
+
+        .cv-language__russian {
+          width: 90%;
+        }
+        
+        .cv-language__romanian {
+          width: 80%;
+        }
+        
+        .cv-language__english {
+          width: 67%;
+        }
+      }
+    }
+}
+

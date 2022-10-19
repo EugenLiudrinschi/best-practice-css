@@ -1,0 +1,44 @@
+@media (max-width: 992px) {
+  .cv-container {
+    margin: 10px;
+    grid-template-columns: repeat(1, 1fr);
+
+    .cv-left-side {
+      margin-left: 0;
+    }
+  }
+
+  .cv-right-side {
+    .cv-hobby ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+
+  .cv-right-side {
+    .cv-about {
+        .cv-about-box {
+        flex-direction: column;
+
+        .cv-company {
+          min-width: 160px;
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    .cv-skills {
+      .cv-about-box {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .cv-hobby {
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
